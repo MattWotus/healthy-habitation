@@ -20,7 +20,7 @@ class ProductList extends React.Component {
 
   render() {
     return (
-      <div className="row pt-5 pb-5 d-flex justify-content-around main">
+      <div className="row pl-4 pr-4 pt-5 pb-5 d-flex justify-content-around main">
         {
           this.state.products.map(product => {
             return (

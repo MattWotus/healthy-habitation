@@ -6,7 +6,7 @@ function ProductListItem(props) {
   const price = formatter.format(insertDecimal(props.price));
   const description = props.description;
   return (
-    <div className="col-3 ml-4 mr-4">
+    <div className="col-4">
       <div className="card mb-5">
         <img src={image} className="card-img-top" alt={product} />
         <div className="card-body">
