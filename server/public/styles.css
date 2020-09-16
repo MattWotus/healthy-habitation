@@ -1,0 +1,15 @@
+img {
+  object-fit: contain;
+}
+
+.card {
+  height: 60vh;
+}
+
+.card-img-top {
+  height: 250px;
+}
+
+.main {
+  background-color: rgba(211, 211, 211, 0.2);
+}
