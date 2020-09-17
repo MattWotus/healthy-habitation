@@ -13,3 +13,12 @@ img {
 .main {
   background-color: rgba(211, 211, 211, 0.2);
 }
+
+button {
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+button:focus {
+  outline: 0;
+}
