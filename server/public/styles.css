@@ -6,8 +6,17 @@ img {
   object-fit: contain;
 }
 
+.fa-shopping-cart {
+  color: rgb(255, 255, 255);
+}
+
+h5 {
+  color: rgb(255, 255, 255);
+}
+
 .card {
   max-width: 25vw;
+  cursor: pointer;
 }
 
 .card-img-top {
