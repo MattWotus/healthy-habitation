@@ -8,10 +8,7 @@ img {
 
 .fa-shopping-cart {
   color: rgb(255, 255, 255);
-}
-
-h5 {
-  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .card {
@@ -21,6 +18,10 @@ h5 {
 
 .card-img-top {
   height: 250px;
+}
+
+.cartCard {
+  border: none;
 }
 
 .main {
@@ -39,6 +40,10 @@ h5 {
 
 .textColor {
   color: rgba(0, 0, 0, 0.6);
+}
+
+.textColorWhite {
+  color: rgb(255, 255, 255);
 }
 
 .colorWhite {
