@@ -2,6 +2,11 @@ import React from 'react';
 import CartSummaryItem from './cartSummaryItem';
 
 function CartSummary(props) {
+  let total = 0;
+  for (let i = 0; i < props.cart.length; i++) {
+    total = total + props.cart[i].price;
+  }
+  total = formatter.format(insertDecimal(total));
   if (props.cart.length === 0) {
     return (
       <div className='d-flex flex-column border mt-3 colorWhite'>
@@ -54,8 +59,22 @@ function CartSummary(props) {
           </ul>
         </div>
       </div>
+      <div className='row d-flex justify-content-center mb-3'>
+        <div className='col-10'>
+          <h2>Total: {total}</h2>
+        </div>
+      </div>
     </div>
   );
 }
+
+function insertDecimal(num) {
+  return (num / 100).toFixed(2);
+}
+
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD'
+});
 
 export default CartSummary;
