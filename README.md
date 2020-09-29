@@ -17,7 +17,7 @@ A full stack Node.js and React shopping cart app.
 
 ## Live Demo
 
-Try the application live at https://mattwotus.github.io/wicked-sales-js/ 
+Try the application live at https://healthy-habitation.mattwotusdev.com/ 
 
 ## Features
 
@@ -29,7 +29,7 @@ Try the application live at https://mattwotus.github.io/wicked-sales-js/
 
 ## Preview
 
-
+![healthy-habitation](assets/healthy-habitation.gif)
 
 ## Development
 
