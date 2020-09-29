@@ -9,7 +9,7 @@ function CartSummary(props) {
   total = formatter.format(insertDecimal(total));
   if (props.cart.length === 0) {
     return (
-      <div className='d-flex flex-column border mt-3 colorWhite'>
+      <div className='d-flex flex-column boder mt-3 colorWhite'>
         <div className='row mt-3 mb-3 pl-5 pr-5'>
           <div className='col-12'>
             <button onClick={() => props.setView('catalog', {})}><h5 className='mb-0 textColor'>&lt; Back to Catalog</h5></button>
@@ -60,8 +60,9 @@ function CartSummary(props) {
         </div>
       </div>
       <div className='row d-flex justify-content-center mb-3'>
-        <div className='col-10'>
+        <div className='col-10 d-flex justify-content-between'>
           <h2>Total: {total}</h2>
+          <button onClick={() => props.setView('checkout', {})} type="button" className="btn btn-primary mb-3">Checkout</button>
         </div>
       </div>
     </div>
