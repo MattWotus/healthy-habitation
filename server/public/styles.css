@@ -2,6 +2,14 @@
   background-color: rgba(211, 211, 211, 0.2);
 }
 
+.companyName {
+  justify-content: center;
+}
+
+.cartDiv {
+  justify-content: center;
+}
+
 img {
   object-fit: contain;
 }
@@ -66,5 +74,16 @@ button:focus {
 @media only screen and (max-width: 992px) {
   .card {
     max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .companyName {
+    justify-content: flex-start;
+  }
+
+  .cartDiv {
+    justify-content: flex-end;
+    margin-top: 1rem;
   }
 }
