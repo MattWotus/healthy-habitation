@@ -69,9 +69,7 @@ export default class App extends React.Component {
     if (this.state.view.name === 'catalog') {
       return (
         <div className='container-fluid'>
-          <div className='row'>
-            <Header cartItemCount={this.state.cart.length} setView={this.setView} />
-          </div>
+          <Header cartItemCount={this.state.cart.length} setView={this.setView} />
           <div className="main">
             <ProductList setView={this.setView} />
           </div>
@@ -80,27 +78,21 @@ export default class App extends React.Component {
     } else if (this.state.view.name === 'details') {
       return (
         <div className='container-fluid containerHeight'>
-          <div className='row'>
-            <Header cartItemCount={this.state.cart.length} setView={this.setView} />
-          </div>
+          <Header cartItemCount={this.state.cart.length} setView={this.setView} />
           <ProductDetails addToCart={this.addToCart} params={this.state.view.params} setView={this.setView} />
         </div>
       );
     } else if (this.state.view.name === 'cart') {
       return (
         <div className='container-fluid containerHeight'>
-          <div className='row'>
-            <Header cartItemCount={this.state.cart.length} setView={this.setView} />
-          </div>
+          <Header cartItemCount={this.state.cart.length} setView={this.setView} />
           <CartSummary cart={this.state.cart} setView={this.setView} />
         </div>
       );
     } else if (this.state.view.name === 'checkout') {
       return (
         <div className='container-fluid containerHeight'>
-          <div className='row'>
-            <Header cartItemCount={this.state.cart.length} setView={this.setView} />
-          </div>
+          <Header cartItemCount={this.state.cart.length} setView={this.setView} />
           <CheckoutForm placeOrder={this.placeOrder} cart={this.state.cart} setView={this.setView} />
         </div>
       );
