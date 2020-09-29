@@ -159,6 +159,37 @@ app.post('/api/cart', (req, res, next) => {
     });
 });
 
+app.post('/api/orders', (req, res, next) => {
+  if (req.session.cartId) {
+    if (!req.body.name || !req.body.creditCard || !req.body.shippingAddress) {
+      return res.status(400).json({
+        error: '"name", "creditCard", and "shippingAddress" must be filled out'
+      });
+    }
+    const sql = `
+    insert into "orders" ("cartId", "name", "creditCard", "shippingAddress")
+    values ($1, $2, $3, $4)
+    returning *
+  `;
+    const params = [req.session.cartId, req.body.name, req.body.creditCard, req.body.shippingAddress];
+    db.query(sql, params)
+      .then(result => {
+        delete req.session.cartId;
+        return res.status(201).json(result.rows[0]);
+      })
+      .catch(err => {
+        console.error(err);
+        return res.status(500).json({
+          error: 'An unexpected error occured.'
+        });
+      });
+  } else {
+    return res.status(400).json({
+      error: 'There is no cartId stored in the current session.'
+    });
+  }
+});
+
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });
