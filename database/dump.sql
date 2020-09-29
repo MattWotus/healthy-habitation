@@ -229,15 +229,6 @@ ALTER TABLE ONLY public.products ALTER COLUMN "productId" SET DEFAULT nextval('p
 --
 
 COPY public."cartItems" ("cartItemId", "cartId", "productId", price) FROM stdin;
-92	4	1	2999
-93	5	4	999
-94	4	3	2900
-95	6	2	2595
-96	6	5	9900
-97	6	2	2595
-98	6	5	9900
-99	6	1	2999
-100	7	1	2999
 \.
 
 
@@ -247,9 +238,6 @@ COPY public."cartItems" ("cartItemId", "cartId", "productId", price) FROM stdin;
 
 COPY public.carts ("cartId", "createdAt") FROM stdin;
 4	2020-09-29 00:21:00.810209+00
-5	2020-09-29 00:25:34.740342+00
-6	2020-09-29 01:33:41.000669+00
-7	2020-09-29 17:39:17.268866+00
 \.
 
 
@@ -258,9 +246,6 @@ COPY public.carts ("cartId", "createdAt") FROM stdin;
 --
 
 COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", "createdAt") FROM stdin;
-1	5	Tim Davis	123456789	123 LearningFuze	2020-09-29 00:25:59.567396+00
-2	4	Matt Wotus	0000 0000 0000 0000	123 Happy Lane\nApartment 7F\nChicago, IL 60615	2020-09-29 01:28:06.255781+00
-3	6	Matt Wotus	0000 0000 0000 0000	123 Happy Street\nChicago, IL 60615	2020-09-29 01:35:25.126036+00
 \.
 
 
@@ -269,12 +254,12 @@ COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", 
 --
 
 COPY public.products ("productId", name, price, image, "shortDescription", "longDescription") FROM stdin;
-1	Shake Weight	2999	/images/shake-weight.jpg	Dynamic Inertia technology ignites muscles in arms, shoulders, and chest.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-2	ShamWow	2595	/images/shamwow.jpg	It's like a chamois, towel, and sponge, all in one! Soaks up to 10x it's weight in any liquid!	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-3	Snuggie	2900	/images/snuggie.jpg	Super-Soft Fleece with pockets! One Size fits all Adults! Keeps you Warm & Your Hands-Free!	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-4	Wax Vac	999	/images/wax-vac.jpg	Gentle way to remove ear wax. Safe and hygienic. Reduces the risk of painful infections.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-5	Ostrich Pillow	9900	/images/ostrich-pillow.jpg	Create your own snugly space in the world and feel-good anywhere with the ultimate cocoon pillow.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-6	Tater Mitts	830	/images/tater-mitts.jpg	8 Seconds is all you need with Tater Mitts. Quickly and easily prepare all your favorite potato dishes with Tater Mitts.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
+1	Face Mask - 4 Pack	1199	/images/face-mask.png	Dynamic Stay protected with surgical face masks.	Keep you and your family protected from airborne germs and diseases with this four-pack of surgical face masks. Comfy and made to fit all face shapes and sizes, these masks will cover your both your nose and mouth if worn properly. Don't take any chances during the ongoing global pandemic, so stay safe and wear a mask.
+2	Gloves - 20 Pack	1799	/images/gloves.png	Keep your hands away from germs with surgical gloves.	Keep you and your family protected from germ-filled surfaces with this 20-pack of surgical gloves. Comfy and made to fit all hand sizes, these gloves are the perfect protection for your hands when you're out running errands.
+3	Hand Sanitzer - 5 Pack	2499	/images/hand-sanitizer.png	The perfect way to keep your hands clean.	Stay protected against germs with this five-pack of hand sanitizer bottles. Perfect for your home, the sanitizer kills 99.99% of germs and keeps your hands feeling soft. Each bottle contains eight fluid ounces of sanitizer.
+4	On-The-Go Hand Sanitizer - 8 Pack	2100	/images/mini-hand-sanitizier.png	Keep your hands clean while out running errands.	Stay protected against germs while out running errands with this eight-pack of on-the-go hand sanitizer bottles. Perfect for your home, the sanitizer kills 99.99% of germs and contains moisturizers and vitamin E to keep your hands feeling soft. Each bottle contains 0.5 fluid ounces of sanitizer.
+5	UV Cell Phone Sanitizier	7699	/images/phone-sanitizer.png	Sanitize your phone safely and thoroughly in under five minutes.	A better option than chemical wipes, this UV Cell Phone Sanitizer uses two UV-C builbs to clean your phone in impressive speed. It kills 99.99% of bacteria in just five minutes, all while charging your phone. UV-C light destroys germs by breaking apart their DNA, resulting in the germs inability to function or reproduce.
+6	UV Sanitizier	18000	/images/sanitizing-box.png	Sanitize anything from face masks to a tablet with this spacious UV Sanitizer.  	Using two large UV-C lights and a reflective inner surface, this UV Sanitizer kills 99.9% of germs in as little as 15 minutes. With a spacious interior, it can sanitize items such as face masks, toys, bottles, tablets, remote controls, and more. No family should be without such a powerful sanitizer during the ongoing global pandemic.
 \.
 
 
@@ -282,7 +267,7 @@ COPY public.products ("productId", name, price, image, "shortDescription", "long
 -- Name: cartItems_cartItemId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 100, true);
+SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 105, true);
 
 
 --

@@ -4,13 +4,14 @@ import ProductList from './product-list';
 import ProductDetails from './product-details';
 import CartSummary from './cartSummary';
 import CheckoutForm from './checkoutForm';
+import HomeModal from './homeModal';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       view: {
-        name: 'catalog',
+        name: 'homeModal',
         params: {}
       },
       cart: []
@@ -66,7 +67,17 @@ export default class App extends React.Component {
   }
 
   render() {
-    if (this.state.view.name === 'catalog') {
+    if (this.state.view.name === 'homeModal') {
+      return (
+        <div className='container-fluid'>
+          <HomeModal setView={this.setView}/>
+          <Header cartItemCount={this.state.cart.length} setView={this.setView} />
+          <div className="main">
+            <ProductList setView={this.setView} />
+          </div>
+        </div>
+      );
+    } else if (this.state.view.name === 'catalog') {
       return (
         <div className='container-fluid'>
           <Header cartItemCount={this.state.cart.length} setView={this.setView} />

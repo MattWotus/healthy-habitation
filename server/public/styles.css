@@ -1,9 +1,19 @@
+body {
+  font-family: 'Raleway',
+  sans-serif;
+}
+
 .container-fluid {
   background-color: rgba(211, 211, 211, 0.2);
 }
 
 .companyName {
   justify-content: center;
+}
+
+.companyName h3 {
+  font-family: 'Rock Salt',
+  cursive;
 }
 
 .cartDiv {
@@ -24,8 +34,12 @@ img {
   cursor: pointer;
 }
 
+.card:hover {
+  box-shadow: 5px 10px 10px #888888;
+}
+
 .card-img-top {
-  height: 250px;
+  height: 240px;
 }
 
 .cartCard {
@@ -67,13 +81,72 @@ button {
   border: none;
 }
 
+.buttonBlue {
+  background-color: rgb(75, 156, 211);
+  color: rgb(255, 255, 255);
+}
+
 button:focus {
   outline: 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+
+.modal-content {
+  width: 35%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(75, 156, 211);
+  border: 5px solid rgb(19, 41, 75);
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.understandButton {
+  border: 2px solid rgb(19, 41, 75);
+  transition: none;
+}
+
+@media only screen and (max-width: 1528px) {
+  .modal-content {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 1310px) {
+  .modal-content {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1161px) {
+  .modal-content {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 992px) {
   .card {
     max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 932px) {
+  .modal-content {
+    width: 60%;
   }
 }
 
@@ -84,6 +157,18 @@ button:focus {
 
   .cartDiv {
     justify-content: flex-end;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .modal-content {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 655px) {
+  .modal-content {
+    width: 80%;
   }
 }
