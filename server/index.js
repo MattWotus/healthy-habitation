@@ -81,7 +81,7 @@ app.get('/api/cart', (req, res, next) => {
       })
       .catch(err => next(err));
   } else {
-    return [];
+    return res.json([]);
   }
 });
 
