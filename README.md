@@ -38,7 +38,7 @@ Try the application live at https://healthy-habitation.mattwotusdev.com/
 1. Clone the repository.
 
    ```
-   git clone https://github.com/MattWotus/wicked-sales-js.git
+   git clone https://github.com/MattWotus/healthy-habitation.git
    ```
    
 2. Open the folder in a code editor and open the index.html in default browser.
