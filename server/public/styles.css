@@ -18,6 +18,7 @@ body {
 
 .cartDiv {
   justify-content: center;
+  cursor: pointer;
 }
 
 img {
@@ -26,7 +27,6 @@ img {
 
 .fa-shopping-cart {
   color: rgb(255, 255, 255);
-  cursor: pointer;
 }
 
 .card {
