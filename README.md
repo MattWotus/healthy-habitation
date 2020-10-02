@@ -1,5 +1,5 @@
 # healthy-habitation
-A full-stack Node.js and React shopping cart app.
+A full-stack React and Node.js shopping cart app.
 
 ## Technologies Used
 
