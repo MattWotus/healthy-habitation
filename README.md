@@ -3,7 +3,7 @@ A full-stack React and Node.js shopping cart app.
 
 ## Technologies Used
 
-- React.js
+- React
 - Node.js
 - Express.js
 - PostgreSQL
